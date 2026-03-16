@@ -31,7 +31,7 @@
                                     <span class="text-xs text-gray-400">
                                         Creato il: {{ $post->created_at->format('d/m/Y H:i') }}
                                     </span>
-                                    <span class="text-gray-400 italic">Scritto da: {{ $post->user->name }}</span>
+                                    
                                     
                                     <div class="flex space-x-4 items-center">
                                         <a href="{{ route('posts.edit', $post->id) }}" class="text-yellow-600 hover:underline">✏️ Modifica</a>
