@@ -15,6 +15,10 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <!-- AGGIUNGI QUESTO: Il link alla lista dei post -->
+                    <x-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.index')">
+                        {{ __('I miei Post') }}
+                    </x-nav-link>
                 </div>
             </div>
 

@@ -27,7 +27,10 @@ class PostController extends Controller
             'title.min' => 'Il titolo deve avere almeno 5 caratteri.',
         ]);
 
-        Post::create($request->all());
+        $request->user()->posts()->create([
+            'title' => $request->title,
+            'body'  => $request->body,
+        ]);
 
         return redirect('/posts')->with('success', 'Post creato con successo!');
     }
